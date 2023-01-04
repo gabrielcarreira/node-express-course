@@ -1,0 +1,24 @@
+extends app.pug 
+
+block titulo
+    title Cliente #{client.name}
+
+
+block conteudo
+    .card
+        h5.card-header Detalhes de #{client.name}
+        .card-body
+            p 
+                strong ID: 
+                | #{client.id}
+            p 
+                strong Nome: 
+                | #{client.name}
+            p 
+                strong Email: 
+                | #{client.email}
+            p 
+                strong Criado Em: 
+                | #{client.createdAt}
+
+            a.btn.btn-primary(href="/clients/") Voltar

@@ -1,0 +1,15 @@
+extends app.pug 
+
+block titulo
+    title Cadastrar Cliente
+
+block conteudo
+    h1 Cadastrar Cliente
+    form(action='/clients/', method='post')
+        .mb-3 
+            label.form-label(for='name') Nome 
+            input#name.form-control(type='text' value='' required name='name' placeholder='Digite o nome')
+        .mb-3 
+            label.form-label(for='email') Email 
+            input#email.form-control(type='email' value='' required name='email' placeholder='Digite o email')
+        button(type="submit").btn.btn-primary Enviar
